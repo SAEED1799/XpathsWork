@@ -9,9 +9,9 @@ Ex3 - is to Write an XPath expression that selects the authors of all the blog p
    ```bash
    pip install lxml
 
-to run this script-
-  '''terminal
-  python .\answers.py
+2. to run this 'python' script:
+   '''terminal
+   python .\answers.py
 
 
 
