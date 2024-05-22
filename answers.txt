@@ -1,0 +1,10 @@
+Ex1-
+//li[@class='post']/a
+
+
+Ex2-
+//div[@class='post']/h2/a/text()
+
+
+Ex3 -
+//div[@class='post']//span[@class='author']/text()
