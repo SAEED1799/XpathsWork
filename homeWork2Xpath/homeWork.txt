@@ -1,0 +1,72 @@
+Saeed Esawi- 314830985
+XPath Task
+
+
+1. Extract Titles: Write an XPath query to extract all book titles.
+
+//book/title/text()
+
+Explanation: This query selects the text content of all <title> elements that are children of <book> elements.
+2. Extract Authors: Write an XPath query to extract all authors' names.
+
+//book/author/text()
+
+Explanation: This query selects the text content of all <author> elements that are children of <book> elements.
+3. Books Published After 2004: Write an XPath query to extract titles of books published after the
+year 2004.
+
+//book[year > 2004]/title/text()
+
+Explanation: This query selects the text content of the <title> elements of <book> elements where the <year> element's value is greater than 2004.
+4. Books by Category: Write an XPath query to list titles of all books in the "web" category.
+
+//book[@category='web']/title
+
+Explanation: This query selects the text content of the <title> elements of <book> elements where the category attribute is "web".
+5. Books with Multiple Authors: Write an XPath query to list titles of books that have more than one
+author.
+
+//book[count(author) > 1]/title
+
+Explanation: This query selects the text content of the <title> elements of <book> elements that have more than one <author> child element.
+6. Books Priced Above $30: Write an XPath query to extract titles of books priced above $30.
+
+//book[price>30]/title
+
+Explanation: This query selects the text content of the <title> elements of <book> elements where the <price> element's value is greater than 30.
+7. Titles and Prices of Fiction Books: Write an XPath query to extract titles and prices of all fiction
+books.
+
+//book[@category='fiction']/title | //book[@category='fiction']/price
+
+Explanation: This query selects the text content of both the <title> and <price> elements of <book> elements where the category attribute is "fiction".
+8. Books with Specific Language: Write an XPath query to list titles of books written in English(lang="en").
+
+//book/title[@lang='en']
+
+Explanation: This query selects the text content of the <title> elements that have a lang attribute with the value "en".
+9. Authors of Cooking Books: Write an XPath query to list all authors of cooking books.
+
+//book[@category='cooking']/author/text()
+
+Explanation: This query selects the text content of the <author> elements of <book> elements where the category attribute is "cooking".
+10. Books Published Between 2000 and 2010: Write an XPath query to extract titles of books
+published between the years 2000 and 2010.
+
+//book[year>1999 and year<2011]/title
+
+Explanation: This query selects the text content of the <title> elements of <book> elements where the <year> element's value is between 2000 and 2010.
+11. Most Expensive Book: Write an XPath query to find the title and price of the most expensive
+book.
+
+//book[price = max(//book/price)]/title | //book[price = max(//book/price)]/price
+
+Explanation: This query selects the text content of both the <title> and <price> elements of the <book> element(s)
+ where the <price> element's value is the maximum among all books.
+12. Books Sorted by Year: Write an XPath query to list titles of books sorted by their publication year
+in ascending order.
+
+//book[//year]/title
+
+Explanation: This query selects the <year> elements and the text content of the <title> elements of all <book> elements.
+ Sorting must be handled in application logic after extraction.
